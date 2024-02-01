@@ -1,0 +1,68 @@
+.dark{
+    background-color: hsl(0, 0%, 0%);
+}
+.purpule{
+    background-color: hsl(280, 50%, 50%);
+}
+.pink {
+    background: #ff0066;
+}
+.red{
+    background-color: hsl(7, 50%, 50%);
+}
+.blue{
+    background-color: hsl(200,50%,50%);
+}
+.grey{
+    background-color: hsl(0, 0%, 22%);
+}
+p{
+  font-size: 150%;
+  
+}
+h1{
+   font-size: 400%;
+}
+body{
+    margin:0;
+    font-family:  Kanit ; 
+    color: hsl(128, 77%, 69%);
+    background: hsl(233, 55%, 55%);
+}
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+}
+.curve{
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom:0;
+    text-align: center;
+}
+.curve::before{
+    content: '';
+    display:block;
+    position:absolute; 
+    border-radius: 100% 50%; 
+    height:100% ;
+    width:55% ;
+    transform: translate(85%,60%);
+    background-color: hsl(233, 55%, 55%);
+
+}
+.curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    height: 100%;
+    width: 55%;
+    background-color: hsl(280, 50%, 50%);
+    transform:translate(-4%,40%);
+    z-index: -1;
+}

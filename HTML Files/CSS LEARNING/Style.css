@@ -1,0 +1,143 @@
+body{
+    background-color: coral;
+    display:flow-root;/*this will make every element float around it a*/
+    margin:0px;
+}
+#img1       /* FLOAT */
+{
+  float:left ;
+  margin-right:25px;
+  height:100px;
+  width: 50px;
+
+}
+#p1{
+    color: yellowgreen; 
+   
+}
+.a2{
+   color: violet;
+}
+#google:hover
+{
+    color: hsl(271, 76%, 73%)
+}
+#google:visited
+{
+    color:hsl(251, 27%, 59%) ;
+}
+#googlecom{
+    /*fonts*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:250% ;
+    font-weight: 750;
+    font-style:italic ;
+    /*Borders*/
+    border-bottom: 5px outset hsl(271, 76%, 53%);
+    border-bottom-left-radius:15px ;
+    border-bottom-right-radius:10px ;
+    border-top: 4px inset blueviolet;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 10px;
+
+    text-shadow:3px 3px 4px ;
+
+    width:280px;
+    height:50px;
+    background-color: blueviolet;
+
+}
+#box1{
+    
+    /*box and box shadow */
+    width: 350px;
+    height:100px;
+    background-color: rgb(152, 87, 3);   
+    box-shadow: 4px 4px 7px rgb(26, 23, 0),-4px -4px 7px rgb(76, 67, 3);
+    /* Margin padding */  
+    margin:0px 0px 0px 50px;   
+    /*margin:-top- -right- -bottom- -left-*/
+
+    /*you can use auto so it will stick to center */
+
+}
+#helloworld{
+    width:250px;
+    border-style:inset;
+    border-color: rebeccapurple;
+    border-width: 10px;
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 200;
+    font-family:fantasy;
+    font-weight: 50;
+    text-shadow:3px 3px 4px rgb(122, 51, 153), -3px -3px 3px rgb(1, 2, 72) ;
+    
+
+}
+#p3/*OVERFLOWING*/
+{
+    height:25px;
+    border-style: dotted;
+    border-color: blueviolet;
+    overflow: clip;/*auto,scroll,visible,hidden,clip*/
+    overflow-clip-margin: auto/*you can type px aswell*/;
+}
+#list::first-letter
+{
+    font-size: 150%;
+    font: italic;
+}
+#list >li
+{
+   border: 4px hsl(195, 100%, 56%);
+   border-style:outset;
+   border-radius: 15%;
+   border-bottom-left-radius:1px ;
+   border-top-left-radius:1px ;
+   margin-left: 25px;
+   width: auto;
+}
+#list>li::selection
+{
+    background-color: black;
+    color: green;
+}
+/* Display: block:(if you use block in span it will be like div )
+            inline:(if you use inline in div it will be like span)
+            inline-block:(same as inline but you can use width/height)
+            none:(it will not display it at all )
+   Position: relative :(Position where it is normally)
+             fixed    :(Will be fixed in viewport{like ADS})
+             absolute :(Position relative to its ancestor)
+             sticky  :(its similar fixed but it will have its place)
+             static   :(default position to an element)
+*/
+.Display{
+    font-size: 200%;
+}
+#DisplayDIV{
+    overflow:hidden;
+    float:left;
+    background-color: hsl(0, 76%, 53%);
+    display:block ;
+    position:relative; /*you need to add top: ''px to use sticky*/
+  width: 250px;
+  height: 250px;
+  top:0px ;
+
+}
+#DisplaySPAN{
+    overflow:hidden;
+    float: left;
+    background-color: hsl(195, 100%, 56%);
+    display: block;
+    position:relative;
+  width: 250px ;
+  height: 250px;
+  margin-right:25px ;
+}
+.randomparag{
+    display:none;
+    visibility: hidden;
+}

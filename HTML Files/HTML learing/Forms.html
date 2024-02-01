@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<!--
+lable=
+   for="id" is gives the textwriten in label a name 
+input= will give you the option to give input in the website
+   -type= the type of input (text-number-password-email-date-tel-radio
+        -checkbox) (to make only one button can be pressed at a time you need 
+         to have them in the same  )
+  
+   -id="id" will since the input box with the text written before it
+        The id is the same with the one in "for" 
+   -name="name" you can think of it like a variable (name="user input")    
+   -placeholder="text" will display "text" in the box when the box is empty
+   -value="value" its the default value of name (means if user did not put any  
+            input then value= "value")
+   - min/max= is the minimun/maximum value he can put   *(numbers)* 
+   -minlenght/maxlenght= its the min/max number of letters of userinput
+   -required= make the box required to fill and will tell you to fill it when empty 
+
+select= it give the user a list to choose one input
+   -<option>= is an element in the list 
+
+
+
+
+
+
+-->
+
+
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+
+    <body>                         <!--enctype work best with big files -->
+        <form action="action_page.php" method="post" enctype="multipart/form-data">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Spongebob" required>  
+             
+                <br>
+
+            <label for="fname" >Last name</label>
+            <input type="text" id="fname" placeholder="SquarePants" required>
+
+                <br>           
+
+            <label for="fage">Age</label>
+            <input type="number" id="fage" placeholder="18" min="0" max="105" required>
+
+                <br>
+               
+            <label for="pass">Password</label>    
+            <input type="password" id="pass" placeholder="password" minlength="6" maxlength="16" required>
+
+                <br>
+
+            <label for="email">Email </label>
+            <input type="email" id="email" placeholder="email@gmail.com" required>
+            
+                <br>
+
+            <label for="BDay">BirthDay </label>
+            <input type="date" id="BDay"  required>
+
+                <br>
+
+            <label for="phonenum">Phone </label>
+            <input type="tel" id="phonenum" placeholder="(not required) 0663-577-579" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" >
+
+                <br>
+             
+            <label for="gender">Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            
+            <label for="weird">Others </label>
+            <input type="radio" id="weird" name="gender" value="weird">
+
+                <br>
+                
+                <label for="body">BodyType:</label>
+                <label for="fat">Fat</label>
+                <input type="radio" id="fat" name="body" value="male">
+                
+                <label for="skinny">skinny</label>
+                <input type="radio" id="skinny" name="body" value="female">
+                
+                <label for="builder">Bodybuilder </label>
+                <input type="radio" id="builder" name="body" value="weird">
+
+                <br>
+            <label for="sport">Favorite Sport :</label>
+            <select id="interest" name="interest">
+                <option value="FootBall">FootBall</option>
+                <option value="basketball">basketball</option>
+                <option value="voleyball">voleyball</option>
+            </select>
+           
+                <br>
+
+            <label for="other">Other <small>(favorite sport)</small></label>    
+            <input type="text" id="other" name="other"  placeholder="not required" >
+            
+                <br>
+
+            <label for="health"> Eat Healthy</label>
+            <input type="checkbox" id="health" name="health" value="health" >
+
+                <br>
+            <label for="comment">Comment</label>
+            <textarea id="comment" rows="4" cols="25"></textarea>
+            
+                <br> 
+            <label for="file">FILE</label>
+            <input type="file" id="file" accept="file/txt">   
+                
+                <br>
+            <input type="reset">
+            <input type="submit">
+           
+
+               
+        </form>
+    </body>
+
+</html>
