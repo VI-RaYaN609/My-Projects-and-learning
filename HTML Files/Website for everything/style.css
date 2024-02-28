@@ -1,0 +1,64 @@
+body{
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh; 
+}
+a:hover{
+    cursor:pointer;
+}
+h1{
+    text-align: center;
+    color: hsl(300, 28%, 28%);
+}
+.navbar ul{
+    background-color: hsl(0, 0%, 20%);
+    margin:0px;
+    padding: 0px;
+    text-align: center;
+}
+.navbar li{
+    
+    list-style-type: none;
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: none;
+    color: hsl(0, 0%, 79%);
+    font-size: 150%;
+    font-weight: bold;
+    padding:15px;
+    display:block;
+}
+.navbar a:hover{
+    background-color:hsl(0, 0%, 9%) ;
+    color: hsl(0, 0%, 59%)
+}
+h2{
+    text-align: center;
+    color: hsl(300, 28%, 28%);
+}
+main .website:hover{
+    background-color: linear-gradient(to right, hsl(208, 88%, 55%), hsl(330, 87%, 68%));
+    color: hsl(300, 28%, 28%);
+    border-color:hsl(208, 68%, 55%)  hsl(330, 67%, 68%) hsl(330, 67%, 68%) hsl(208, 68%, 55%) ;
+
+}
+.text-align .website{
+    font-size: 250%;
+    text-decoration: none;
+    color: hsl(300, 28%, 38%);
+    background-color: linear-gradient(to right, #3494e6, #ec6ead);
+    border: 15px inset hsl(330, 87%, 68%);
+    border-top-color: hsl(208, 100%, 55%);
+    border-left-color: hsl(208, 100%, 55%);
+}
+.text-align{
+    text-align: center;
+}
+.buttons{
+    margin-left: 15px;
+    width:100px ;
+    height:50px ;
+}
