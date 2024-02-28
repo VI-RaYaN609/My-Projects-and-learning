@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCenter</title>
+    <style>
+        body{
+            background-image:url('Home.jpg');
+            background-size:cover ;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .navbar ul{
+            padding:0;
+            list-style-type: none;
+            background-color: #931297;
+            text-align: center;
+            border-radius: 5%;
+        }
+        .navbar li{
+            position: relative;
+            margin: 0;
+            display: inline-block;
+            width: auto;
+        }
+        .navbar a{
+            text-decoration: none;
+            color:#F9E8C9;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 23px;
+            display: block;
+            padding : 25px;
+        }
+        .navbar li:hover{
+            color:#b9ac92;
+            background-color: #69135e
+        }
+        .dropdown li{
+            display: block;
+        }
+        .dropdown{
+            width: 100%;
+            position: absolute;
+            background: #69135e;
+            z-index: 999;
+            display: none;
+        }
+        .navbar li:hover .dropdown{
+            display: block;
+            width: auto;
+            text-align: center;
+        }
+
+        .link{
+            position: absolute;
+            text-decoration: none;
+            transform: translate(-50%,-50%);
+            color: #931297;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 20%;
+        }
+        #Link1{
+            font-size: 2em;
+            top: 50%;
+            left: 85%;
+            text-align: center;
+        } 
+        #Link1 img{
+            width: 90%;
+            height: auto;
+            border-radius: 20%;
+        }
+        #Link1:hover{
+            font-size:4.5em;
+            width: auto;
+        }  
+        #Link2{
+            font-size: 3em;
+            top: 50%;
+            left: 15%;
+        }
+        #Link2 img{
+            width: 90%;
+            height: auto;
+        }
+        #Link2:hover{
+            font-size:4.5em;
+            width: auto;
+        }       
+        #Link3{
+            font-size: 3em;
+            top: 50%;
+            left: 50%;
+        }
+        #Link3 p{
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%,-50%);
+        }
+        #Link3 img{
+            border-radius:25% ;
+        }
+        #Link3:hover img{
+            left: 50%;
+            width: 120%;
+        }
+        #Link3:hover{ font-size: 4.5em;}
+
+        #Link4{
+            font-size: 2em;
+            top: 40%;
+            left: 11%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="circle-container"></div>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-el" ><a href="../index3.html">Home</a></li>
+                <li class="navbar-el" id="Products"><a>Products</a>
+                    <ul class="dropdown">
+                        <li><a href="Stores/clothing.html" id="navbar-cloth">Clothings</a></li>
+                        <li><a href="Stores/food.html" id="navbar-food">Supermarket</a></li>
+                        <li><a href="Stores/electronics.html" id="navbar-elec">Electronics</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-el" ><a href="help.html">Contact</a></li>
+                <li class="navbar-el" ></li>
+            </ul>
+        </nav>
+    </header>
+    <main>  
+            <a class="link" id="Link1" href="Stores/electronics.html" >
+                <img src="computer.jpg"><br>Electronics</a>
+
+            <a class="link" id="Link2" href="Stores/clothing.html" >
+                <img src="clothes.png">
+                <br>Clothings
+            </a>
+            <a class="link" id="Link3" href="Stores/food.html">
+                <img src="Food.jpg">
+                <br><p>Food</p>
+            </a>
+        </main>
+    <script src="index.js"></script>
+</body>
+</html>

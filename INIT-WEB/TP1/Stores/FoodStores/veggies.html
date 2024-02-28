@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeggiesSection</title>
+    <style>
+        body{
+            background-image:url('veggies.jpg');
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: Bold;
+        }
+        .text-c{
+            font-size: 7em;
+            color: rgb(252, 235, 0);
+        }
+        ul{
+            list-style-type: none;
+        }
+        #veggies{
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%,-50%);
+        }
+        #fruits{
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            transform: translate(-50%,-50%);
+        }
+        .bar1>li{
+            padding: 7px;
+        }
+        .bar1>li>ul{
+            font-size: 0em;
+        }
+        .bar1:hover>li>ul{
+            font-size: 1em;
+            color: aliceblue;
+        }
+        .name>ul{
+            font-size: 0em;
+        }
+        .name:hover>ul{
+            font-size: 1em;
+        }
+        #list{
+            font-size: 0em;
+        }
+        a{
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            text-shadow: 5px;
+            font-size: 50px;
+            font-weight: bolder;
+            color: rgb(252, 235, 0);
+            border: 4px solid rgb(252, 235, 0);
+            border-radius: 15%;
+        }
+        a:hover{
+            font-size: 60px;
+            color:hsla(56, 100%, 49%, 0.44);
+            border-color: hsla(56, 100%, 49%, 0.54);
+        }
+        .description{
+            color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <main>        
+        <div id="bar">
+            <ul id="veggies" class="bar1">
+                <li>
+                    <h1 class="text-c">Veggies</h1>
+                    <ul class="list">
+                        <li class="name">
+                            <h1>Carrot 🥕$2</h1>
+                            <ul>
+                                <li class="description">A nutritious root vegetable, carrots are rich in vitamins and antioxidants.<br> They come in various colors, including orange, purple, and white.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Broccoli 🥦$3</h1>
+                            <ul>
+                                <li class="description">Broccoli is a green vegetable with a flowering head. It is a great <br>source of vitamins, minerals, and fiber, known for its numerous health benefits.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Spinach 🍃$4</h1>
+                            <ul>
+                                <li class="description">Spinach is a leafy green vegetable that is high in nutrients and low <br>in calories. It is versatile and can be used in salads, smoothies, or cooked dishes.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Cucumber 🥒$2</h1>
+                            <ul>
+                                <li class="description">Cucumbers are refreshing vegetables with a high water content. They are <br>often used in salads, sandwiches, and as a healthy snack.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Potato 🥔$3</h1>
+                            <ul>
+                                <li class="description">Potatoes are starchy tubers that are a staple in many cuisines. They can be<br> prepared in various ways, such as mashed, baked, or fried.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Tomato 🍅$5</h1>
+                            <ul>
+                                <li class="description">Tomatoes are red, juicy fruits commonly used in cooking. They are rich<br> in antioxidants and can be enjoyed fresh or in sauces, salads, and more.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Bell Pepper 🌶️$5</h1>
+                            <ul>
+                                <li class="description">Bell peppers come in various colors and are known for their sweet taste.<br> They can be eaten raw in salads, roasted, or used in various dishes.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Zucchini 🥒$4</h1>
+                            <ul>
+                                <li class="description">Zucchini is a versatile summer squash that can be used in both savory and<br> sweet dishes. It's low in calories and high in nutrients.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <ul id="fruits" class="bar1">
+                <li>
+                    <h1 class="text-c">Fruits</h1>
+                    <ul>
+                        <li class="name">
+                            <h1>Apple 🍎$3</h1>
+                            <ul>
+                                <li class="description">Apples are crisp and sweet fruits that come in various varieties. They are<br> a good source of fiber and antioxidants, promoting overall health.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Banana 🍌$2</h1>
+                            <ul>
+                                <li class="description">Bananas are potassium-rich fruits with a natural sweetness. They are a convenient <br>and nutritious snack that provides energy and essential nutrients.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Orange 🍊$4</h1>
+                            <ul>
+                                <li class="description">Oranges are citrus fruits known for their vitamin C content. They have a<br> tangy flavor and are often consumed fresh or as a refreshing juice.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Strawberry 🍓$6</h1>
+                            <ul>
+                                <li class="description">Strawberries are juicy and red berries that are rich in antioxidants.<br> They are delicious on their own, in desserts, or as part of a fruit salad.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Grapes 🍇$7</h1>
+                            <ul>
+                                <li class="description">Grapes are small, sweet or sour fruits that grow in clusters. They can<br> be eaten fresh, dried as raisins, or used to make juice and wine.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Mango 🥭$8</h1>
+                            <ul>
+                                <li class="description">Mangoes are tropical fruits known for their sweet and juicy flesh. They<br> can be enjoyed fresh, in smoothies, or as part of various dishes.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Watermelon 🍉$3</h1>
+                            <ul>
+                                <li class="description">Watermelon is a refreshing and hydrating fruit with sweet, pink flesh.<br> It's a popular choice during hot weather to stay cool and hydrated.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Pineapple 🍍$7</h1>
+                            <ul>
+                                <li class="description">Pineapple is a tropical fruit with a sweet and tangy taste. It can be<br> enjoyed fresh, in fruit salads, or as a flavorful addition to various recipes.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>        
+      <a href="../food.html">Go Back</a>
+    </main>
+</body>
+</html>

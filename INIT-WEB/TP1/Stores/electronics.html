@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectronicShop</title>
+    <style>
+        body{
+            background-image:url('computer.jpg');
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: Bolder;
+            text-shadow: 5px;
+        }
+        .text-c{
+            font-size: 7em;
+            color: rgb(252, 235, 0);
+        }
+        ul{
+            list-style-type: none;
+        }
+        #phones{
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%,-50%);
+        }
+        #computers{
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            transform: translate(-50%,-50%);
+        }
+        .bar1>li{
+            padding: 7px;
+        }
+        .bar1>li>ul{
+            font-size: 0em;
+        }
+        .bar1:hover>li>ul{
+            font-size: 1em;
+            color: aliceblue;
+        }
+        .name>ul{
+            font-size: 0em;
+        }
+        .name:hover>ul{
+            font-size: 1.2em;
+        }
+        #list{
+            font-size: 0em;
+        }
+        a{
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            text-shadow: 5px;
+            font-size: 50px;
+            font-weight: bolder;
+            color: rgb(252, 0, 0);
+            border: 4px solid rgb(252, 0, 0);
+            border-radius: 15%;
+        }
+        a:hover{
+            font-size: 60px;
+            color:hsla(0, 100%, 49%, 0.452);
+            border-color: hsla(0, 100%, 49%, 0.452);
+        }
+        .description{
+            color: rgb(195, 0, 255);
+        }
+        .description1{
+            color:rgb(255, 51, 0, 0.938);
+        }
+
+    </style>
+</head>
+<body>
+    <main>        
+        <div id="bar">
+            <ul id="phones" class="bar1">
+                <li>
+                    <h1 class="text-c">Phones</h1>
+                    <ul class="list">
+                        <li class="name">
+                            <h1>iPhone 📱</h1>
+                            <ul>
+                                <li class="description1">IPhone 15 ProMax 📱$1499</li>
+                                <li class="description1">IPhone 14 ProMax 📱$1299</li>
+                                <li class="description1">IPhone 13 ProMax 📱$999</li>
+                                <li class="description1">IPhone 12 ProMax 📱$799</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Samsung Galaxy 📱$699</h1>
+                            <ul>
+                                <li class="description">The Samsung Galaxy series offers a range of Android smartphones with powerful features<br>, vibrant displays, and innovative technology.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Google Pixel 📱$799</h1>
+                            <ul>
+                                <li class="description">Google Pixel phones are known for their exceptional camera quality, pure Android experience<br>, and integration with Google services.</li>
+                            </ul>
+                        </li>
+                        <!-- Add more phone entries as needed -->
+                    </ul>
+                </li>
+            </ul>
+        
+            <ul id="computers" class="bar1">
+                <li>
+                    <h1 class="text-c">Computers</h1>
+                    <ul>
+                        <li class="name">
+                            <h1>MacBook Pro 💻$1299</h1>
+                            <ul>
+                                <li class="description">The MacBook Pro is a high-performance laptop by Apple, known for its powerful hardware, stunning Retina display, and premium build quality.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>Dell XPS 💻$1099</h1>
+                            <ul>
+                                <li class="description">The Dell XPS series offers premium Windows laptops with impressive displays, strong performance, and a sleek design.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1>HP Spectre 💻$999</h1>
+                            <ul>
+                                <li class="description">The HP Spectre series features stylish and powerful laptops with a focus on performance, portability, and cutting-edge design.</li>
+                            </ul>
+                        </li>
+                        <!-- Add more computer entries as needed -->
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      <a href="../index.html">Go Back</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaturalDrinks Section</title>
+    <style>
+        body{
+            background-image:url('juice.jpg');
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: Bold;
+            overflow: hidden;
+        }
+        .text-c{
+            font-size: 7em;
+            color: rgb(252, 235, 0);
+        }
+        ul{
+            list-style-type: none;
+        }
+        #juices{
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%,-50%);
+        }
+        #sodas{
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            transform: translate(-50%,-50%);
+        }
+        .bar1>li{
+            padding: 7px;
+        }
+        .bar1>li>ul{
+            font-size: 0em;
+            color: rgb(252, 235, 0);
+        }
+        .bar1:hover>li>ul{
+            font-size: 1em;
+            color: aliceblue;
+        }
+        .name>ul{
+            font-size: 0em;
+        }
+        .name:hover>ul{
+            font-size: 1em;
+        }
+        #list{
+            font-size: 0em;
+        }
+        a{
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            text-shadow: 5px;
+            font-size: 50px;
+            font-weight: bolder;
+            color: rgb(252, 235, 0);
+            border: 4px solid rgb(252, 235, 0);
+            border-radius: 15%;
+        }
+        a:hover{
+            font-size: 60px;
+            color:hsla(56, 100%, 49%, 0.44);
+            border-color: hsla(56, 100%, 49%, 0.54);
+        }
+        .description{
+            color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <main>        
+        <div id="bar">
+            <ul id="juices" class="bar1">
+                <li>
+                    <h1 class="text-c">Juices</h1>
+                    <ul class="list">
+                        <li class="name">
+                            <h1 >Orange Juice 🍊$2</h1>
+                            <ul>
+                                <li class="description">Refreshing and rich in vitamin C, our orange juice is freshly squeezed from the<br> finest oranges. Enjoy the natural sweetness and goodness of this classic juice.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Apple Juice 🍏$3</h1>
+                            <ul>
+                                <li class="description">Made from crisp apples, our apple juice offers a delightful blend of sweetness and<br> tartness. Perfect for a refreshing sip any time of the day.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Grape Juice 🍇$3.5</h1>
+                            <ul>
+                                <li class="description">Indulge in the rich and fruity flavor of our grape juice. Packed with antioxidants,<br> it's a delicious and healthy choice for all ages.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Carrot-Orange Blend 🥕🍊$4</h1>
+                            <ul>
+                                <li class="description">Experience a unique blend of sweetness and earthiness with our carrot-orange juice. <br><br>A nutrient-packed choice for those looking for a vibrant and flavorful option.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Tropical Paradise Smoothie 🍍$5</h1>
+                            <ul>
+                                <li class="description">Escape to the tropics with our tropical paradise smoothie. A luscious blend of pineapple,<br> mango, and other tropical fruits, creating a refreshing and exotic beverage.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Berry Burst Mix 🍓🍇$4.5</h1>
+                            <ul>
+                                <li class="description">Savor the burst of flavors with our berry mix juice. A delightful combination of strawberries<br> and grapes, offering a sweet and tangy sensation with every sip.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Cucumber-Mint Infusion 🥒🌿$3.5</h1>
+                            <ul>
+                                <li class="description">Stay refreshed with our cucumber-mint infusion. A hydrating and invigorating choice, perfect<br>for those seeking a light and revitalizing beverage.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Watermelon Crush 🍉$4</h1>
+                            <ul>
+                                <li class="description">Quench your thirst with our watermelon crush juice. Experience the juiciness of ripe<br> watermelons in every sip, providing a cooling and sweet sensation.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <ul id="sodas" class="bar1">
+                <li>
+                    <h1 class="text-c">Sodas</h1>
+                    <ul>
+                        <li class="name">
+                            <h1 >Cola Soda 🥤$2</h1>
+                            <ul>
+                                <li class="description">A classic favorite, our cola soda delivers a perfect balance of sweetness and <br>carbonation. Enjoy the timeless taste of this fizzy beverage.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Lemon-Lime Soda 🍋$1.5</h1>
+                            <ul>
+                                <li class="description">Experience the zesty and citrusy goodness of our lemon-lime soda. Crisp and refreshing,<br> it's an ideal choice for a thirst-quenching experience.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Ginger Ale 🍹$3</h1>
+                            <ul>
+                                <li class="description">Sip on the bold and distinctive flavor of our ginger ale. Crafted with real ginger,<br> it provides a satisfying and slightly spicy kick to your taste buds.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Berry Fizz Delight 🍇🍓$3.5</h1>
+                            <ul>
+                                <li class="description">Indulge in the delightful fizz of our berry fizz soda. A sparkling blend of grapes<br> and strawberries, creating a joyful and effervescent beverage.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Citrus Splash Soda 🍊🍋$2.5</h1>
+                            <ul>
+                                <li class="description">Refresh your senses with our citrus splash soda. A lively combination of oranges and <br>lemons, offering a burst of citrusy goodness in every sip.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Peach Fizz Fusion 🍑$4</h1>
+                            <ul>
+                                <li class="description">Experience the perfect fusion of peaches and fizz with our peach fizz soda. A sweet<br> and bubbly delight that will tantalize your taste buds.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Vanilla Cream Soda 🍦$3.5</h1>
+                            <ul>
+                                <li class="description">Satisfy your sweet tooth with our vanilla cream soda. Creamy and indulgent, it's a<br> treat for those who love the classic taste of vanilla in a fizzy form.</li>
+                            </ul>
+                        </li>
+                        <li class="name">
+                            <h1 >Mango Tango Fizz 🥭$4.5</h1>
+                            <ul>
+                                <li class="description">Embark on a tropical dance of flavors with our mango tango fizz. A vibrant blend of<br> ripe mangoes and effervescence, creating a tropical paradise in a bottle.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>        
+      <a href="../food.html">Go Back</a>
+    </main>
+</body>
+</html>

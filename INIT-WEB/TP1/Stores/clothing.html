@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClothingStore</title>
+    <style>
+        body{
+            background-image:url('clothingback.jpg');
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(252, 235, 0);
+            font-size: 20px;
+            font-weight: Bold;
+        }
+        header{
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%,-50%);
+        }
+        .hello{
+            padding: 15px;
+        }
+        #First{
+            font-size: 20px;
+        }
+        ul,ol{
+            list-style: none;
+            font-size: 0em;
+        }
+        #bar{
+            width: 50%;
+            position: absolute;
+            left: 55%;
+            top: 60%;
+            transform: translate(-50%,-50%);
+            height: 100%;
+        }
+        h2{
+            color: aliceblue;
+        }
+        #jeans{
+            font-size: 0px;
+        }
+        h1:hover+ul{
+            font-size: 20px;
+        }
+        .hello:hover>ul{
+            font-size: 20px;
+        }
+        h2:hover+ol{
+            font-size: 1em;
+        }
+        .lastli{
+            color: rgb(0, 255, 13);
+        }
+        a{
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            text-shadow: 5px;
+            font-size: 50px;
+            font-weight: bolder;
+            color: rgb(252, 235, 0);
+            border: 4px solid rgb(252, 235, 0);
+            border-radius: 15%;
+        }
+        a:hover{
+            font-size: 60px;
+            color:hsla(56, 100%, 49%, 0.44);
+            border-color: hsla(56, 100%, 49%, 0.54);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clothes </h1>
+    </header>
+    <main>        
+      <div id="bar">
+        <ul id="First">
+            <li class="hello">
+                <h1>Hats</h1>
+                <ul>
+                    <li>
+                        <h2>Beanie 10$</h2>
+                        <ol>
+                            <li class="lastli">A close-fitting, knitted hat that covers the head and often extends over the ears. Provides warmth and is commonly worn in colder weather.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>Baseball Cap 7$</h2>
+                        <ol>
+                            <li class="lastli">A casual hat with a rounded crown and a stiff bill or visor at the front. Usually made of cotton and commonly worn for sports or everyday casual style.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>StrawHat 3$</h2>
+                        <ol>
+                            <li class="lastli">A lightweight hat made from straw or similar materials, featuring a brim and an open-weave design for breathability. Ideal for sunny and warm weather.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>BucketHat 5$</h2>
+                        <ol>
+                            <li class="lastli">A hat with a wide, downward-sloping brim and a flat crown. The brim is often stitched to the crown all the way around. Originally popularized for outdoor activities, it has become a fashionable accessory.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <li class="hello">
+                <h1>Shirts</h1>
+                <ul>
+                    <li>
+                        <h2>PoloShirt 40$</h2>
+                        <ol>
+                            <li class="lastli"> A short-sleeved shirt with a collar and a buttoned placket at the neck. Made of breathable materials like cotton, it provides a sporty and comfortable look.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>WhiteDress Shirt 80$</h2>
+                        <ol>
+                            <li class="lastli">A classic and formal dress shirt typically in solid white. Features a pointed collar, long sleeves, and buttoned cuffs. Commonly worn with suits for formal occasions.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>T-Shirt 35$</h2>
+                        <ol>
+                            <li class="lastli">A T-shirt with a printed design or graphic on the front. Graphics can include logos, images, or text, allowing for a wide range of styles from casual to artistic.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>Button-Down Oxford Shirt 50$</h2>
+                        <ol>
+                            <li class="lastli">A short-sleeved shirt with a collar and a buttoned placket at the neck. Made of breathable materials like cotton, it provides a sporty and comfortable look.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <li class="hello">
+                <h1>Pants</h1>
+                <ul>
+                    <li>
+                        <h2 class='pant' id='Pants1'>Jeans 20$</h2>
+                        <ol>
+                            <li class="lastli">Classic denim pants, durable and versatile. Available in various styles like skinny, straight, bootcut, and more.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2 class='pant' id='Pants2'>Chinos 25$</h2>
+                        <ol>
+                            <li class="lastli">Casual cotton pants, often with a straight cut. Suitable for both casual and business-casual occasions.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2 class='pant' id='Pants3'>SuitTrousers 30$</h2>
+                        <ol>
+                            <li class="lastli">Formal pants typically worn with a matching suit jacket. Common in professional and formal settings.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2 class='pant' id='Pants4'>Joggers 15$</h2>
+                        <ol>
+                            <li class="lastli">Comfortable, elasticized pants with a tapered fit. Often made from soft materials like cotton or fleece.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <li class="hello">
+                <h1>Boots</h1>
+                <ul>
+                    <li>
+                        <h2>Combat Boots 120$</h2>
+                        <ol>
+                            <li class="lastli">Combat boots are sturdy, military-inspired boots with lace-up closures. They typically have a high ankle and a durable sole, providing a rugged and edgy appearance.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>Ankle Booties</h2>
+                        <ol>
+                            <li class="lastli">Ankle booties are shorter boots that typically end at or above the ankle. They come in various styles, including block heels, stilettos, and flats, making them versatile for different occasions and outfits.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>Knee-High Riding Boots</h2>
+                        <ol>
+                            <li class="lastli">Riding boots are tall boots that reach just below the knee. They often have a flat or low heel and a simple, equestrian-inspired design, making them a classic choice for both casual and dressy outfits.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>Nike Air Force 1</h2>
+                        <ol>
+                            <li class="lastli"> The Nike Air Force 1 is a classic basketball shoe known for its iconic design. It features a chunky silhouette and is available in various colors and materials. The Air Force 1 has become a fashion staple beyond the basketball court.</li>
+                            <li class="lastli"></li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+      <a href="../index.html">Go Back</a>
+    </main>
+</body>
+</html>

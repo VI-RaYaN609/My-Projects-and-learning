@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMarket</title>
+    <style>
+        body{
+            background-image:url('supermarketback.jpg');
+            background-size:cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(252, 235, 0);
+            font-size: 30px;
+            font-weight: Bold;
+        }
+        #bar{
+            width: 75%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            height: 100%;
+        }
+
+        a{
+            color: rgb(252, 235, 0);
+            text-decoration: none;
+        }        
+        #goback{
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            text-shadow: 5px;
+            font-size: 50px;
+            font-weight: bolder;
+            color: rgb(252, 235, 0);
+            border: 4px solid rgb(252, 235, 0);
+            border-radius: 15%;
+        }
+        #goback:hover{
+            font-size: 60px;
+            color:hsla(56, 100%, 49%, 0.44);
+            border-color: hsla(56, 100%, 49%, 0.54);
+        }
+        #bar a:hover{
+            font-size: 50px;
+            color:hsla(56, 100%, 59%, 0.84);
+        }
+        #box1{
+            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 20%;
+            left: 20%;
+        }
+        #box2{
+            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 20%;
+            left: 80%;
+        }
+        #box3{
+            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 20%;
+            left: 80%;
+        }
+        #box4{
+            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 80%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>        
+      <div id="bar">
+        <a id="box1" href="FoodStores/meat.html"><h1>Meats🍖/Fishes🐟</h1></a>
+        <a id="box2" href="FoodStores/veggies.html"><h1>Veggies🥬/Fruits🍒</h1></a>
+        <a id="box4" href="FoodStores/drinks.html"><h1>Drinks🧃</h1></a>
+      </div>
+      <a id='goback' href="../index.html">Go Back</a>
+    </main>
+</body>
+</html>
