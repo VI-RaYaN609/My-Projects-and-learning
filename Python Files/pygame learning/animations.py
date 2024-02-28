@@ -14,6 +14,7 @@ pygame.display.set_caption("Animations ")
 player_image = pygame.image.load("C:\\Users\\VI RaYaN\\Desktop\\VS Code\\ILYES GAY GAME\\image.png").convert()
 player_image = pygame.transform.scale(player_image,(150,150))
 
+
 clock = pygame.time.Clock()
 
 text = pygame.font.Font(None,50)
@@ -65,12 +66,12 @@ while running:
         velocity = 0
     if velocity <=50:
         velocity +=GRAVITY*60//FPS 
-    if y <= HEIGHT-155:
+    if y <= HEIGHT:
         y += velocity
     if y>HEIGHT:
-        y=HEIGHT-155
+        y=HEIGHT
     
-    display.blit(rotated_image,((WIDTH-150)//2,y))
+    display.blit(rotated_image,player_image.get_rect(center=((WIDTH)//2,y)))
     display.blit(surface,(50,50))
 
     pygame.display.update()

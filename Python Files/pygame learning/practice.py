@@ -40,7 +40,7 @@ lost_text_font = pygame.font.Font("Python Files\\pygame learning\\Fonts\\Pixelty
 lost_text = lost_text_font.render("Looser !!",True,(255,255,255))
 lost_text_rect = lost_text.get_rect(center=(WIDTH//2,HEIGHT//2))
 
-exit_x = pygame.image.load("C:\\Users\\VI RaYaN\\Desktop\\VS Code\\Python Files\\pygame learning\\images\\X image (1).png").convert_alpha()
+exit_x = pygame.image.load("C:\\Users\\VI RaYaN\\Desktop\\VS Code\\Python Files\\pygame learning\\images\\X image.jpg").convert_alpha()
 exit_x = pygame.transform.scale(exit_x,(75,75))
 exit_x_rect = exit_x.get_rect(topleft=(25,15))
 

@@ -9,15 +9,16 @@ player_rectangle = player_surface.get_rect(midbottom=(500,701))
 
 ground_surface = pygame.Surface((1000,100))
 ground_surface.fill((0,150,0))
-ground_rect = ground_surface.get_rect(bottomleft=(0,800))
-
+ground_rect = ground_surface.get_rect(bottomleft=(0,800)) # midbottom,midtop,bottomleft,bottomright,topleft,topright
+                                                          # midleft,midright,center
 text_font = pygame.font.Font(None,50)
 text = text_font.render("Press A-D to Move!!",False,(255,255,255))
 
 clock = pygame.time.Clock()
 running = True
 D_down =False
-A_down =False
+A_down =False   #better way then having multiple variables for each key you can you a set,list,tuple..
+                # (set for bestperformance) and add the key if the key is pressed
 while running:
     display.fill((0,150,250))
     for event in pygame.event.get():
@@ -35,11 +36,11 @@ while running:
             if event.key == pygame.K_a:
                 A_down =False
     if D_down:
-        player_rectangle.x +=4
+        player_rectangle.x +=8
         # if player left screen from right it will be back on the left
         if player_rectangle.left >=1000: player_rectangle.right=0
     if A_down:
-        player_rectangle.x -=4
+        player_rectangle.x -=8
         #if player left screen from left it will be back from the right
         if player_rectangle.right<=0: player_rectangle.left=1000
 

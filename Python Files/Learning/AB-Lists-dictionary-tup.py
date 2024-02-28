@@ -17,7 +17,7 @@ for i in food:
 print("2D LISTS :")
 players = ["rayan","imad","aymen","oussama"]
 score = [50,15,25,30]
-deaths = [2,4,5,3]
+deaths = [2,4,5,3] 
 game = [players,score,deaths]
 
 print(game)
