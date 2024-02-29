@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        #container{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:hsl(0, 0%, 15%) ;
+            border-radius: 15px;
+            max-width: 500px;
+            overflow: hidden;
+        }
+        #display{
+            font-size: 5rem;
+            text-align: center;
+            border: none;
+            width: 100%;
+            background-color: hsl(0, 0%, 25%);
+            padding: 20px;
+            color: white;
+        }
+        #buttons{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            padding: 25px;
+        }
+        #buttons>button{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border: none;
+            font-size: 50px;
+            font-weight: bold;
+            background-color: hsl(0, 0%, 6%);
+            color: white;
+        }
+        #buttons>button:hover{
+            background-color:hsl(0, 0%, 13%);
+            color: hsl(0, 0%, 60%);
+        }
+        #buttons>button:active{
+            background-color:hsl(0, 0%, 35%);
+            color: hsl(0, 0%, 47%);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input id="display" readonly>
+        <div id="buttons">
+            <button onclick="AddToScreen('7')">7</button>
+            <button onclick="AddToScreen('8')">8</button>
+            <button onclick="AddToScreen('9')">9</button>
+            <button onclick="AddToScreen('+')">+</button>
+            <button onclick="AddToScreen('4')">4</button>
+            <button onclick="AddToScreen('5')">5</button>
+            <button onclick="AddToScreen('6')">6</button>
+            <button onclick="AddToScreen('-')">-</button>
+            <button onclick="AddToScreen('1')">1</button>
+            <button onclick="AddToScreen('2')">2</button>
+            <button onclick="AddToScreen('3')">3</button>
+            <button onclick="AddToScreen('*')">*</button>
+            <button onclick="AddToScreen('.')">.</button>
+            <button onclick="AddToScreen('0')">0</button>
+            <button onclick="calc()">=</button>
+            <button onclick="AddToScreen('/')">/</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="AddToScreen('(')">(</button>
+            <button onclick="AddToScreen(')')">)</button>
+            <button style="font-size: 2.5rem;" onclick="ans()">ANS</button>
+            <button onclick="del()">D</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById("display")
+
+        let bool = false
+        let ANS 
+        function AddToScreen(button){
+            const a = display.value
+            if(a==="Infinity"||a==="error"||bool)
+            {
+                display.value=""
+                bool = false
+            }
+            display.value +=button
+        }
+
+        function clearDisplay(){
+            display.value = ""
+        }
+
+        function calc(){
+            try{
+               display.value = eval(display.value)
+               bool = true
+               ANS = display.value
+            }
+            catch(error){display.value = "error"}
+        }
+
+        function del(){
+            display.value=display.value.slice(0,display.value.length-1)
+        }
+
+        function ans(){
+            if (!(ANS ===undefined)){
+                AddToScreen(ANS)
+            }
+        }
+    </script>
+</body>
+</html>

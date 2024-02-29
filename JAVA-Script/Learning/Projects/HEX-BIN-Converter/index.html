@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary-HexaDecimal converter</title>
+    <style>
+        body{
+            background-color: rgb(29, 29, 29);;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            overflow: hidden;
+            margin: 0;
+            color: white;
+        }
+        #container{
+            display: grid;
+            gap: 50px;
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%,-50%);
+            border: none;
+            width: 100%;
+            justify-content: center;
+            height: 50%;
+            background-color: rgb(29, 29, 29);
+        }
+        input{
+            text-align: center;
+            color: white;
+        }
+        #display{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: black;
+            color: white;
+            width: 60%;
+            height: 10%;
+            border: none;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 150px;
+        }        
+        #Base{
+            background-color: brown;
+            border: none;
+            font-size: 2rem;
+        }
+        #buttons{
+            display: flex;
+            gap: 5%;
+        }
+        #input{
+            border: none;
+            background-color: rgb(49, 49, 49);
+            font-size: 2rem;
+            height: 40%;
+            min-height: 50px;
+            border-radius: 15px;
+        }
+        #inputbase{
+            height: 40%;
+            min-height: 50px;
+            width: 150px;
+            border: none;
+            background-color: rgb(49, 49, 49);
+            font-size: 2rem;
+            border-radius: 50%;
+        }
+        button{
+            background-color: rgb(37, 18, 34);
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight:bolder;
+            border: none;
+            height: 50px;
+            font-size: 2rem;
+        }
+        button:hover{
+            background-color: rgb(22, 11, 24);
+            color: rgb(153, 153, 153);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input id="display" readonly>
+        <div id="ele">
+            <input type="text"id="Base">
+            <button id="button" onclick="calc()">Get Number</button>
+        </div>
+        <div id="buttons">
+            <input id="inputbase">
+            <input id="input">
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById("display")
+        const input = document.getElementById("input")
+        const inputbase= document.getElementById("inputbase")
+        const base = document.getElementById("Base")
+        display.value=``
+        input.value = `Enter a number`
+        inputbase.value=`Base:10`
+        base.value = `Desired Base`
+        const elements = [display,input,base,inputbase]
+        for(let ele of elements){
+            ele.style.color = `rgb(153, 153, 153)`
+        }
+
+
+        function val0(element){
+            element.value = ``
+        }
+        
+        function hover(){
+            input.addEventListener("mousedown",function(){
+                input.value =``
+                input.style.color=`white`
+            })
+            base.addEventListener("mousedown",function(){
+                base.value =``
+                base.style.color=`white`
+            })
+            inputbase.addEventListener("mousedown",function(){
+                inputbase.value =``
+                inputbase.style.color=`white`
+            })
+        }
+        let numbers = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+        function calc(){
+            try{
+                let numbase = Number(inputbase.value)
+                const basenums = numbers.slice(0,numbase)
+                for(let char in input.value){
+                    console.log(input.value[char])
+                    if(!(String(input.value[char]) in basenums))
+                    {throw new Error("Number contains character not allowed in his base")}
+                }
+                let num = parseInt(input.value,numbase)
+                console.log(num)
+                display.value = num.toString(base.value)
+            }
+            catch(error){display.value=`${error}`}
+        }
+        hover()
+    </script>
+</body>
+</html>
