@@ -1,0 +1,253 @@
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #000000; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff; 
+    border-radius: 6px; 
+}
+*::-ms-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+*::-ms-scrollbar-track {
+    background: #000000;
+}
+@keyframes fadeOut{
+    0%,20%{
+        opacity: 1;
+    }
+
+    80%,100%{
+       opacity: 0;
+    }
+}
+@keyframes start-animation {
+    0%,60%{
+        transform: translateY(-1500px);
+        color: rgba(129, 129, 129, 0.2);
+    }
+    80%{
+        transform: translateY(-60px);
+        color: rgba(129, 129, 129,0.2);
+    }
+    100%{
+        transform: translateY(0);
+        color:rgb(255, 255, 255);
+        display: none;
+    }
+}
+@keyframes main-animation{
+    0%,60%{
+        transform: translateY(+1000px);
+        color: black;
+    }
+    65%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes pFade{
+    0%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+body{
+    background-image: url("TP2/background.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px 0px 150px 0px;
+    overflow: hidden;
+}
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    animation :start-animation 3.5s ease-out;
+    transition:1s ease-out;
+}
+header a{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    border: 5px solid;
+    border-radius: 100%;
+}
+#by{
+    margin: 0px;
+    color: rgb(0, 255, 55);
+    font-size: 175px;
+    font-weight: 900;
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation :fadeOut 2s ease-in forwards;
+    z-index: -1;
+}
+#bruh{
+    margin-bottom: 200px;
+}
+nav{
+    position: sticky;
+    top: 20px;
+    animation :start-animation 2.5s ease-out;
+    z-index: 3;
+    transition: 1s ease-out;
+}
+nav ul{
+    text-align: center;
+}
+nav ol{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(160, 97%, 22%);
+    display: none;
+    border: 0px;
+    z-index: 1;
+    width: auto;
+    padding: 4px;
+    text-align: center;
+}
+nav li:hover ol{
+    display: block;
+}
+
+nav ol li{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+nav li{
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 10px 5px 20px;
+}
+nav ul li:hover>button{
+    border: 5px inset hsl(159, 27%, 38%);
+    background-color: hsla(160, 97%, 22%,0.4);;
+    border-radius: 50px;
+}
+nav ul li button:active{
+    color: hsl(140, 50%,45%);
+}
+nav a{
+    text-decoration: none;
+}
+button{
+    border: 5px inset hsla(159, 27%, 38%,0.0);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 250%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    transition: 0.5s ease-out;
+}
+@media (max-width:900px){
+    button{
+        font-size: 27px;
+    }
+    header{
+        font-size: 30px;
+    }
+    header a{
+        font-size: 25px;
+    }
+    #GIGA{
+        height: 400px;
+        width: 400px;
+    }
+}
+@media (max-width:700px){
+    header{
+        font-size: 25px;
+    }
+    header a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 600px) {
+    button {
+      font-size: 22px; /* Set a smaller font size for smaller screens */
+    }
+    header{
+        font-size: 20px;
+    }
+    header a{
+        font-size: 12px;
+    }
+    section{
+        font-size: 25px;
+    }
+    #GIGA{
+        height: 200px;
+        width: 200px;
+    }
+  }
+.button1{
+    background-color:rgba(1, 61, 41,0.0) ;
+    font-weight: bold;
+}
+.button2{
+    background-color:hsla(160, 97%, 22%,0.0);
+}
+
+main{
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    animation :main-animation 4s ease-out forwards;
+    opacity: 0;
+}
+.fade{
+    opacity: 0.3;
+    animation: pFade 2s ease forwards;
+}
+#GIGA{
+    max-width: 400px;
+    max-height: 400px;
+}
+section{
+    margin-bottom:350px ;
+}
+section h2{
+    min-width: 300px;
+    width: 50%;
+    margin: auto;
+    border: 25px;
+    border-radius: 50%;
+}
+section h3{
+    color:cadetblue ;
+}
+#mailme{
+    color: rgb(138, 151, 147);
+    background-color:aquamarine ;
+    border: 5px solid aquamarine;
+    border-radius: 5px;
+}
+#mailme:hover{
+    color: blueviolet;
+}

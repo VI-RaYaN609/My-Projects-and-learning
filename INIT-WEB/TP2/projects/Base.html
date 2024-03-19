@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary-HexaDecimal converter</title>
+    <style>
+        body{
+            background-color: rgb(29, 29, 29);;
+            margin: 0px;
+            color: white;
+        }
+        #radio-buttons{
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform:translate(-50%,-50%);
+            font-family: arial;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        #container{
+            display: grid;
+            gap: 50px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            justify-content: center;
+            height: 50%;
+        }
+        input{
+            text-align: center;
+            color: white;
+        }
+        #display{
+            position: relative;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 70%;
+            min-height: 50px;
+            border: none;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 150px;
+        }    
+        #Base{
+            background-color: brown;
+            border: none;
+            font-size: 2rem;
+        }
+        button{
+            background-color: rgb(37, 18, 34);
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight:bolder;
+            border: none;
+            height: 50px;
+            font-size: 2rem;
+        }
+        button:hover{
+            background-color: rgb(22, 11, 24);
+            color: rgb(153, 153, 153);
+        }
+        #buttons{
+            display: flex;
+            gap: 5%;
+        }
+        #input{
+            border: none;
+            background-color: rgb(49, 49, 49);
+            font-size: 2rem;
+            height: 40%;
+            min-height: 50px;
+            border-radius: 15px;
+        }
+        #inputbase{
+            height: 40%;
+            min-height: 50px;
+            width: 150px;
+            border: none;
+            background-color: rgb(49, 49, 49);
+            font-size: 2rem;
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="radio-buttons">
+        <label>HexaDecimal</label>
+        <input id="hexa" type="radio" name="ik">
+        <label>Decimal</label>
+        <input id="decimal" type="radio" name="ik">
+        <label>Binary</label>
+        <input id="binary" type="radio" name="ik">
+    </div>
+    <div id="container">
+        <div id="ele">
+            <input type="text"id="Base">
+            <button id="button" onclick="calc()">Get Number</button>
+        </div>
+        <input id="display" readonly>
+        <div id="buttons">
+            <input id="inputbase">
+            <input id="input">
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById("display")
+        const input = document.getElementById("input")
+        const inputbase= document.getElementById("inputbase")
+        const base = document.getElementById("Base")
+        const hex = document.getElementById("hexa")
+        const decimal = document.getElementById("decimal")
+        const binary = document.getElementById("binary")
+        display.value=``
+        input.value = `Enter a number`
+        inputbase.value=`10`
+        base.value = `2`
+        hex.checked=false
+        decimal.checked=false
+        binary.checked=true
+        const elements = [display,input,base,inputbase]
+        for(let ele of elements){
+            ele.style.color = `rgb(123, 123, 123)`
+        }
+        
+        function main(){
+            input.addEventListener("mousedown",function(){
+                input.value =``
+                input.style.color=`white`
+            })
+            base.addEventListener("mousedown",function(){
+                base.value =``
+                hex.checked=false
+                decimal.checked=false
+                binary.checked=false
+                base.style.color=`white`
+            })
+            inputbase.addEventListener("mousedown",function(){
+                inputbase.value =``
+                inputbase.style.color=`white`
+            })
+            hex.addEventListener("change", function () {
+                if (hex.checked) {base.value = "16";base.style.color=`white`}})
+            decimal.addEventListener("change", function () {
+                if (decimal.checked) {base.value = "10";base.style.color=`white`}}) 
+            binary.addEventListener("change", function () {
+                if (binary.checked) {base.value = "2";base.style.color=`white`}})
+        
+            }
+        let numbers = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+        function calc(){
+            try{
+                let numbase = inputbase.value
+                if (isNaN(Number(base.value))||Number(base.value)<2){throw new Error("The Desired Base must be a number and cannot be smaller than 2")}
+                if(isNaN(numbase)||numbase<2){throw new Error("NumberBase must be a number and cannot be smaller than 2")}
+                const basenums = numbers.slice(0,numbase)
+                console.log(input.value)
+                for(let char in input.value){ 
+                    if(!numbers.includes(input.value[char].toLowerCase())){throw new Error("Please Enter a valid number")}
+                    if(!basenums.includes(input.value[char].toLowerCase())){throw new Error("Number Contain character not in his base")}
+                }
+                 
+                let Decimalnum = parseInt(input.value,numbase)
+                display.value = Decimalnum.toString(base.value)
+            }
+            catch(error){display.value=`${error}`}
+        }
+        main()
+    </script>
+</body>
+</html>

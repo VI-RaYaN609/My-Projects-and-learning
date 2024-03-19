@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIGA Profolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Nibou Rayane</h1>
+        <h4>Web Developer | Designer |Programmer</h4>
+        <nav id="navbar">
+            <ul>
+                <li class="scroll"><button style="font-family:'Franklin Gothic Medium'"class="button1">Theme</button>
+                    <ol>
+                        <li class="scroll"><button class="button2" style="color:black;"onclick='DarkTheme()'>DarkTheme</button></li>
+                        <li class="scroll"><button class="button2" style="color: antiquewhite;"onclick='LightTheme()'>LightTheme</button></li>
+                        <li class="scroll"><button class="button2" id="special"onclick='SpecialTheme()'>SpecialTheme</button></li>
+                    </ol>
+                </li>
+                <li class="scroll"><button class="button1" onclick="scrollto('skills')">Skills</button></li>
+                <li class="scroll"><button class="button1" onclick="scrollto('projects')">Projects</button>
+                    <ol>
+                        <li class="scroll"><button class="button2" onclick="scrollto('project1')">Calculator</button></li>
+                        <li class="scroll"><button class="button2" onclick="scrollto('project2')">NumberBase Converter</button></li>
+                        <li class="scroll"><button class="button2" onclick="scrollto('project3')">ShoppingCenter</button></li>
+                    </ol>
+                </li>
+                <li class="scroll"><button class="button1" onclick="scrollto('about')">About me</button></li>
+                <li class="scroll"><button class="button1" onclick="scrollto('contact')">Contact </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <p>Hello there! 👋 I'm Nibou Rayan, a passionate student on an exciting journey to master the trifecta of web development and Programming, With a keen interest in creating engaging and dynamic web experiences, I've embarked on this learning adventure to understand the intricacies of crafting beautiful and functional websites and Applications.</p>
+            <img id="GIGA" src="GIGA.jpg">
+        </section>
+
+        <section id="skills">
+            <h2 class="RGBanimation">Skills 🚀</h2>
+            <p>Experienced With:</p>
+            <p>C/C++ 💻</p>
+            <p>HTML/CSS/JavaScript 🌐</p>
+            <p>Python 🐍💻</p>
+            <p>Adobe 🎨:</p>
+            <p>AfterEffects/Premier/Photoshop 🎬🖌️</p>
+            <p>Basics UE5 (UnrealEngine5) 🎮</p>                
+        </section>
+
+        <section id="projects">
+            <h2 class="RGBanimation">Projects</h2>
+            <div class="project" id="project1">
+                <h3>Calculator WebPage</h3>
+                <p>This Project is a simple Calculator Programme that has the basic calculator needs</p>
+                <img class='projpic' src="calculator.png">
+                <a class="projects" href="projects/Calculator.html" target="_blank">Calculator WebPage</a>
+            </div>
+            <div class="project" id="project2">
+                <h3>Number Base Converter</h3>
+                <p>This Project is a simple Number Base Converter that is designed to convert a numerical representations from one base to another and the most used bases are (Decimal-binary-octal-hexadecimal) </p>
+                <img class='projpic' src="base.png">
+                <a class="projects" href="projects/Base.html" target="_blank">NumberBase Converter</a>
+            </div>
+            <div class="project" id="project3">
+                <h3>ShoppingCenter Webpage</h3>
+                <p>This Project is the TP1 project ,it is a simple shopping center website designed for ease of use with big picture repreaseting different sections of the ShoppingCenter</p>
+                <img class='projpic' src="shoppingcenter.png">
+                <a class="projects" href="../TP1/index.html" target="_blank">ShoppingCenter</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="RGBanimation">About Me</h2>
+            <p>Hello there! 👋 I'm a passionate Entry-level web developer/designer/Programmer on a journey to explore the vast world of coding and creativity. With a love for clean code and elegant design, I strive to bring innovative ideas to life in the digital realm.</p>
+        </section>        
+
+        <section id="contact">
+            <h2 class="RGBanimation">Contact Me</h2>
+            <p>Email: rayandz609@email.com</p>
+            <p><a id="mailme" href="mailto:rayandz609@gmail.com" style="text-decoration: none;">Mail Me</a></p>
+        </section>
+        <section>
+            <h2><button id="back" onclick="scrollto(`header`)">Go Back Up</button></h2>
+        </section>
+            </div>
+    </main>
+
+    <script src="index.js"></script>
+    </body>
+    </html>
+    

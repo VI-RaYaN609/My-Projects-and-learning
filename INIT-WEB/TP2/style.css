@@ -1,0 +1,141 @@
+body{
+    background-image: url("background.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px 0px 150px 0px;
+}
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+#bruh{
+    margin-bottom: 200px;
+}
+nav{
+    position: sticky;
+    top: 20px;
+}
+nav ul{
+    text-align: center;
+}
+nav ol{
+    width: 100%;
+    position: absolute;
+    background-color: hsl(160, 97%, 22%);
+    display: none;
+    border: 0px;
+    z-index: 1;
+}
+nav li:hover ol{
+    display: block;
+    width: auto;
+    text-align: center;
+    padding: 4px;
+}
+
+nav ol li{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+nav li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 10px 5px 20px;
+}
+nav ul li:hover>button{
+    border: 5px solid hsl(159, 27%, 38%);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: hsl(160, 100%, 95%);
+    background-color: hsla(160, 97%, 22%,0.4);;
+}
+button{
+    color: hsl(160, 100%, 75%);
+    border: none;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 250%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+@media (max-width: 600px) {
+    button {
+      font-size: 22px; /* Set a smaller font size for smaller screens */
+    }
+  }
+.button1{
+    background-color:rgba(1, 61, 41,0.1) ;
+    font-weight: bold;
+}
+.button2{
+    background-color:hsla(160, 97%, 22%,0.1);
+}
+
+main{
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+}
+#GIGA{
+    max-width: 400px;
+    min-height: 400px;
+}
+section{
+    margin-bottom:350px ;
+}
+section h2{
+    min-width: 300px;
+    width: 50%;
+    margin: auto;
+    border: 25px;
+    border-radius: 50%;
+}
+section h3{
+    color:cadetblue ;
+}
+.projects{
+    text-decoration: none;
+    background-color: rgb(0, 97, 97);
+    border: 15px solid rgb(0, 97, 97);
+    border-radius: 100%;
+    color: hsl(0, 0%, 50%);
+}
+.projects:hover{
+    background-color: hsl(180, 100%, 9%);
+    border:25px solid hsl(180, 100%, 9%);
+    color: white;
+}
+
+.projpic{
+    max-width: 250px;
+    max-height: 150px;
+}
+#back{
+    text-align: center;
+    width: auto;
+    margin: auto;
+    border: 25px solid;
+    border-radius: 100%;
+    display: fixed;
+}
+#mailme{
+    color: rgb(138, 151, 147);
+    background-color:aquamarine ;
+    border: 5px solid aquamarine;
+    border-radius: 5px;
+}
+#mailme:hover{
+    color: blueviolet;
+}
+#back:hover{
+    border: 45px solid;
+    border-radius: 100%;
+}
