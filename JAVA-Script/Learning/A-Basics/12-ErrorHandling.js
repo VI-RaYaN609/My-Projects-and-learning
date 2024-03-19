@@ -10,8 +10,8 @@ try{ // Code that might cause an error
   const result = dividend/divisor
   console.log(result)
 }                    
-catch(error){
-    console.error(error) //Code That run if error 
+catch(error){//Code That run if error
+    console.error(error)  
 }
 finally{ //(Optional)
     //Code That Always run
